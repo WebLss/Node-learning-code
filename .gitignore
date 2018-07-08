@@ -5,6 +5,7 @@
 ..iml
 .idea/
 md/
-pdf/
 
 .DS_Store
+.gitignore
+code/
