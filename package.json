@@ -1,0 +1,22 @@
+{
+  "name": "node-learning-code",
+  "version": "1.0.0",
+  "description": "NodeJS基础学习笔记、源码分析、代码编写\r 版本：nodeJs: 8.9.0以上",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebLss/Node-learning-code.git"
+  },
+  "author": "'Web寻梦狮' <'1027820283@qq.com'>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WebLss/Node-learning-code/issues"
+  },
+  "homepage": "https://github.com/WebLss/Node-learning-code#readme",
+  "dependencies": {
+    "mime": "2.3.1"
+  }
+}
