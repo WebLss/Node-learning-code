@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/WebLss/Node-learning-code#readme",
   "dependencies": {
+    "formidable": "1.2.1",
     "mime": "2.3.1"
   }
 }
