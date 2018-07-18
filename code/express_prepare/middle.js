@@ -11,7 +11,7 @@ module.exports = function(app){
           var compile = new Function('obj', tpl);
           console.log(compile(data));
           this.send(compile(data));
-      }
+      };
         next();
     });
 
@@ -28,7 +28,7 @@ module.exports = function(app){
         res.send =  function(html){
             res.writeHead(200,{'Content-Type':'text/html;charset=utf-8'});
             res.end(html);
-        }
+        };
         next();
     });
 }
