@@ -14,14 +14,14 @@ app.use('/img',function(req,res,next){
     if(!referrer)
        return next();
     var referHost = require('url').parse(referrer).host.split(':')[0];
-    console.log(req.hostname);
+    //console.log(referHost, req.hostname);
     if(referHost === req.hostname ||  whitelist.indexOf(referHost)!=-1){
         return next();
     }
     res.sendFile(path.join(__dirname,'img','wrong.jpg'));
 
 });
-app.use(express.static(path.join(__dirname,'img')));
+app.use(express.static(path.join(__dirname),{index: false}));
 //返回HTML
 app.get('/',function(req,res){
     console.log(path.join(__dirname,'img.html'));
