@@ -6,7 +6,7 @@ var express = require('express');
 //var proxy = require('http-proxy').createProxyServer();
 var request = require('request');
 var acluster = ["http://localhost:3000","http://localhost:3001"];
-var aliveACluster = ["http://localhost:3000","http://localhost:3001"];;
+var aliveACluster = ["http://localhost:3000","http://localhost:3001"];
 var app = express();
 setInterval(function(){
 
@@ -28,7 +28,7 @@ function proxy(req,res,targets){
 }
 
 function proxyPass(config){
-    return function(req,res,next){
+    return function(req,res, next){
        var target = config[req.hostname];
         proxy(req,res,target);
     }

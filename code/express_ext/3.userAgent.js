@@ -1,7 +1,10 @@
 /**
  * User-Agent:Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36
  */
-
+/**
+ * 用于判断是否是手机端访问
+ * @type {*|createApplication}
+ */
 
 var express = require('express');
 var path = require('path');

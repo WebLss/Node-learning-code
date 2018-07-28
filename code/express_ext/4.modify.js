@@ -10,7 +10,7 @@ function send(filename,req,res){
   var lastModified = new Date(req.headers['if-modified-since']);
   fs.stat(filename,function(err,stat){
 
-        if(stat.mtime.getTime() == lastModified.getTime()){
+        if(stat. mtime.getTime() == lastModified.getTime()){
             res.statusCode = 304;
             res.end();
         }else{
@@ -18,8 +18,7 @@ function send(filename,req,res){
             fs.createReadStream(filename).pipe(res);
         }
   });
-}
-http.createServer(function(req,res){
+}http.createServer(function(req,res){
     if(req.url != '/favicon.ico'){
         var filename = req.url.slice(1);// /index.html
         send(filename,req,res);

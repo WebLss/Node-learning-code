@@ -21,6 +21,7 @@ function checkLanguage(langulages){
       }).sort(function(pre,after){//按Q进行排序，从高到低排序
           return after.q - pre.q;
       }).map(function(item){
+          console.log("item", item);
           return item.name;//把数组的每个元素转成字符串
       });
   }
@@ -31,7 +32,7 @@ function checkLanguage(langulages){
      next();
   }
 }
-app.use(checkLanguage(['en','zh']));;
+app.use(checkLanguage(['en','zh']));
 
 app.get('/',function(req,res){
     res.setHeader('Content-Language',req.acceptLanguage);
